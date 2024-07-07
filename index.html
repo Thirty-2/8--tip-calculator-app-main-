@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Tip|Calculator</title>
+  <style>
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body { background-color: hsl(185, 41%, 84%); }
+
+    /* Utilities */
+    span { font-size: 13px; color: hsl(186, 15%, 50%); }
+    p { font-size: 14px; }
+    textarea { resize: none; border: none; background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%); font-weight: 700; }
+
+
+    /* Container */
+    #Container { background-color: white; width: fit-content; display: flex; gap: 40px; padding: 25px; border-radius: 20px; margin: 200px auto; }
+
+    /* Left */
+    .Left { display: flex; flex-direction: column; gap: 30px; padding: 10px; }
+    .Left p { color: hsl(186, 14%, 43%); }
+
+    /* Top */
+    .Top { display: flex; flex-direction: column; gap: 10px; }
+
+    /* Mid */
+    .Mid { display: flex; flex-direction: column; gap: 10px; }
+
+    /* Box */
+    .Box { background-color: hsl(189, 41%, 97%); display: flex; justify-content: space-between; padding: 10px; border-radius: 5px; width: 100%; cursor: pointer; }
+    
+    /* box */
+    .box { display: grid; grid-template-columns: 1fr 1fr 1fr; row-gap: 10px; column-gap: 10px; font-weight: 700; }
+
+    /* box-1 */
+    .box-1 { background-color: hsl(183, 100%, 15%); padding: 8px; border-radius: 5px; text-align: center; cursor: pointer; color: white; }
+
+    /* box textarea */
+    .box textarea { display: flex; align-self: center; text-align: center;  padding: 7px; border-radius: 5px; font-size: 18px; }
+
+    .box textarea:focus { outline: none; border: solid hsl(172, 67%, 45%) thin; }
+
+
+    /* Bottom */
+    .Bottom { display: flex; flex-direction: column; gap: 10px; }
+
+
+    
+    /* Right */
+    .Right { display: flex; flex-direction: column; gap: 60px; background-color: hsl(183, 100%, 15%); padding: 10px 30px 30px; border-radius: 10px; color: white; }
+
+    /* Right-1st */
+    .Right-1st { display: flex; flex-direction: column; align-content: center; }
+
+    .Right-1st .textarea-1, .textarea-2 { display: flex; justify-content: right; background-color: hsl(183, 100%, 15%);  padding: 20px; width: 150px; color: hsl(172, 67%, 45%); font-size: 40px; overflow: hidden; font-weight: 700;}
+
+    /* Top-r */
+    .Top-r { display: flex; gap: 40px; justify-content: space-between; align-items: center; }
+
+    /* Mid-r */
+    .Mid-r { display: flex; gap: 40px; justify-content: space-between; align-items: center; }
+
+    /* Img */
+    img { width: 4%; }
+
+    /* a */
+    a { text-decoration: none; background-color: hsl(172, 67%, 45%); padding: 10px; text-align: center; border-radius: 5px; color: hsl(183, 100%, 15%); font-weight: 700; }
+    a:hover { background-color: hsl(184, 73%, 74%); }
+
+
+    @media screen and (max-width:650px) {
+
+      /* Container */
+      #Container { background-color: white; width: fit-content; display: flex; flex-direction: column; gap: 40px; padding: 25px; border-radius: 20px; margin: 150px auto; }
+
+      /* box */
+      .box { display: grid; grid-template-columns: 1fr 1fr; row-gap: 10px; column-gap: 10px; font-weight: 700; }
+      
+    }
+
+  </style>
+</head>
+<body>
+    <div id="Container">
+
+      <!-- Left -->
+      <div class="Left">
+
+        <div class="Top">
+          <p>
+            Bill
+          </p>
+
+          <div class="Box">
+            <img src="images/icon-dollar.svg" alt="">
+            <div class="Text"></div>
+          </div>
+        </div>
+
+        <div class="Mid">
+          <p>
+            Select Tip %
+          </p>
+          <div class="box">
+              <div class="box-1">5%</div>
+              <div class="box-1">10%</div>
+              <div class="box-1">15%</div>
+              <div class="box-1">25%</div>
+              <div class="box-1">50%</div>
+              <textarea name="Custom" id="Custom" cols="5" rows="1" placeholder="Custom"></textarea>
+            </div>
+        </div>
+
+        <div class="Bottom">
+          <p>
+            Number of People
+          </p>
+
+          <div class="Box">
+            <img src="images/icon-person.svg" alt="">
+            <div class="Text"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Right -->
+      <div class="Right">
+        <div class="Right-1st">
+
+          <div class="Top-r">
+            
+            <div class="Top-r-1">
+              <p>
+                Tip Amount
+              </p>
+              <span>
+                / person
+              </span>
+            </div>
+            <div class="textarea-1" >$0.00</div>
+            
+          </div>
+
+          <div class="Mid-r">
+            <div class="Mid-r-1">
+              <p>
+                Total
+              </p>
+              <span>
+                / person
+              </span>
+            </div>
+
+            <div class="textarea-2">$0.00</div>
+          </div>
+
+        </div>
+
+        <a href="index.html">RESET</a>
+
+      </div>
+    </div>
+
+</body>
+</html>
